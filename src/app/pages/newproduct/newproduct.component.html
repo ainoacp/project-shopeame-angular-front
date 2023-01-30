@@ -1,0 +1,32 @@
+<body class="manage">
+    <div class="main">
+        <h2>Creación de productos</h2>
+        <div class="form">
+            <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+                <label>Nombre del producto:</label>
+                <input formControlName="name" placeholder="Por ej: Tiesto para planta"/>
+                <label>Precio:</label>
+                <input formControlName="price" placeholder="Por ej: 9.50"/>
+                <label>Descripción:</label>
+                <input formControlName="description" placeholder="Por ej: Lo más vendido este mes"/>
+                <label>Ruta de la imagen:</label>
+                <input formControlName="image" placeholder="Por ej: http://blabla.com/img.jpg"/>
+                <label>Opiniones:</label>
+                <input formControlName="stars" placeholder="Por ej: 4.28"/>
+                <button type="submit">Guardar</button>
+            </form>
+            <img src="../../../assets/images/Line 1.png"/>
+            <div>
+                <p class="preview-title">Preview del producto:</p>
+                <div class="preview">
+                    <img width=150 src="{{newProduct.image}}" alt="{{newProduct.name}}"/>
+                    <p class="description">{{newProduct.description}}</p>
+                    <p class="price">${{newProduct.price}}</p>
+                    <p-rating [(ngModel)]="newProduct.stars" [cancel]="false">{{newProduct.stars}}</p-rating>
+                    <span>{{newProduct.stars}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+

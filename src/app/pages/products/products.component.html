@@ -1,0 +1,17 @@
+<body class="products">
+    <div class="main">
+        <h2>Listado de productos</h2>
+        <input type="text" #filtro (input)="filter(filtro.value)" placeholder="Buscador"/>
+        <div class="gallery">
+            <div *ngFor="let product of paintedProducts" routerLink="/product/{{product.id}}">
+                <img width=150 height=160 src="{{product.image}}" alt="{{product.name}}"/>
+                <p class="description">{{product.description}}</p>
+                <p class="price">${{product.price}}</p>
+                <p-rating [(ngModel)]="product.stars" [cancel]="false">{{product?.stars}}</p-rating>
+                <span>{{product.stars}}</span>
+                <button routerLink="/product/{{product.id}}">Ver</button>
+            </div>
+        </div>
+    </div>
+</body>
+

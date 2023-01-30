@@ -1,0 +1,74 @@
+.manage{
+    background-color: #CCCCCC;
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.main{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    gap: 30px;
+    background-color: #FFFFFF;
+    width: 70%;
+    height: 80%;
+    margin: 60px;
+    padding: 50px;
+    
+    .form{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 50px;
+
+        form{
+            display: flex;
+            flex-direction: column;
+
+            label{
+                font-size: 14px;
+                color: #000000;
+            }
+            input{
+                padding: 10px;
+                height: 36px;
+                width: 518px;
+                left: 0px;
+                top: 0px;
+                border-radius: 4px;
+
+            }
+            button{
+                height: 24px;
+                width: 126px;
+                background: #F89F21;
+                border: 1px solid #F89F21;
+                border-radius: 4px;
+                color: #FFFFFF;
+                margin-top: 20px;
+                align-self: flex-end;
+            }
+        }
+        .preview-title{
+            font-size: 14px;
+            color: #444444;
+            margin: 30px 0;
+        }
+        .preview{
+            margin-right: 35px;
+
+            .description{
+                font-size: 14px;
+                color: #19191D;
+            }
+            .price{
+                font-size: 20px;
+                font-weight: 700;
+            }
+            span{
+                font-size: 14px;
+                color: #41474a;
+            }
+        }
+    }
+}

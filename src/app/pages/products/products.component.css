@@ -1,0 +1,11 @@
+.products {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+.products div {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+}/*# sourceMappingURL=products.component.css.map */
